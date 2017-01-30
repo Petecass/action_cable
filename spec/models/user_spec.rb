@@ -14,6 +14,7 @@ RSpec.describe User, type: :model do
   describe 'ActiveRecord associations' do
     subject { build(:user) }
     it { is_expected.to have_many(:identities) }
+    it { is_expected.to have_many(:messages) }
   end
 
   describe 'class methods' do

@@ -1,0 +1,9 @@
+
+.message-input
+  = form_for(@message, html: { class: 'ui form segment' }) do |f|
+    .field
+      = f.text_area :content
+
+    .field
+      = f.submit "Send", class: 'ui button'
+

@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
   # Associations
   has_many :identities
+  has_many :messages
 
   # Validations
   validates :email, format: { without: TEMP_EMAIL_REGEX, on: :update }
