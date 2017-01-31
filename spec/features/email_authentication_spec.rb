@@ -5,6 +5,7 @@ feature 'Email authentication', type: :feature do
   context 'regular sign up path' do
     let(:user_email) { 'chewy@therepublic.com' }
     let(:user_password) { 'password' }
+    let(:user_name) { 'chewbacca' }
 
     before do
       visit root_path
@@ -13,10 +14,12 @@ feature 'Email authentication', type: :feature do
 
     context 'with valid credentials' do
       it 'creates a user' do
+        fill_in 'user_name', with: user_name
         fill_in 'user_email', with: user_email
         fill_in 'user_password', with: user_password
         fill_in 'user_password_confirmation', with: user_password
         expect { click_on 'Sign up' }.to change { User.count }.by(1)
+        expect(User.last.name).to eq(user_name)
       end
     end
 

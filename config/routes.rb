@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     # unlocks: 'users/unlocks',
     omniauth_callbacks: 'users/omniauth_callbacks',
   }
-  resources :users
-  resources :messages
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
 
-  root 'static_pages#index'
+  resources :users
+  resources :messages
+  root 'messages#index'
 end

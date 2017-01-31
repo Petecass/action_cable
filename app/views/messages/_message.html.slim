@@ -1,6 +1,10 @@
-.message
-  .message-user
-    = message.user.name
-
-  .message-content
-    = message.content
+.event.message
+  .label
+    img src="/images/avatar/small/joe.jpg"
+  .content
+    .summary
+      a = message.user.name
+      .date
+        = l(message.created_at, format: :short)
+    .extra.text
+      = message.content
