@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 # rubocop:disable Style/ExtraSpacing
+ruby '2.3.3'
+
 source 'https://rubygems.org'
 
 gem 'rails',   '~> 5.0.1'
