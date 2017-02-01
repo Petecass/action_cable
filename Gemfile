@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 
 gem 'rails',   '~> 5.0.1'
 
+gem 'mysql2'
 gem 'puma',    '~> 3.7.0'
 gem 'redis'
-gem 'sqlite3', '1.3.13'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder',     '~> 2.5'
