@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rails',   '~> 5.0.1'
 
-gem 'mysql2'
+gem 'pg'
 gem 'puma',    '~> 3.7.0'
 gem 'redis'
 
