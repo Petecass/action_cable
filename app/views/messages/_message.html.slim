@@ -1,10 +1,10 @@
 .event.message
   .label
-    img src="/images/avatar/small/joe.jpg"
+    / img src="/images/avatar/small/joe.jpg"
   .content
     .summary
       a = message.user.name
       .date
         = l(message.created_at, format: :short)
     .extra.text
-      = message.content
+      = sanitize markdown_to_html(message.content)

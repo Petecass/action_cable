@@ -1,3 +1,15 @@
+.message-container {
+  height: 75vh;
+}
+
+.message__feed {
+  height: 90%;
+  overflow: scroll;
+}
+
+.message__form {
+  height: 10%;
+}
 
 .message {
   margin-bottom: 1rem;

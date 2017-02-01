@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails',   '~> 5.0.1'
 
 gem 'puma',    '~> 3.7.0'
+gem 'redis'
 gem 'sqlite3', '1.3.13'
 
 gem 'coffee-rails', '~> 4.2'
@@ -33,6 +34,7 @@ gem 'omniauth-facebook'
 
 gem 'autoprefixer-rails', '~> 6.7.1'
 gem 'i18n-tasks',         '~> 0.9.9'
+gem 'kramdown'
 gem 'meta-tags',          '~> 2.4.0'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'slim-rails'

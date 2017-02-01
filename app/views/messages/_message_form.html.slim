@@ -1,9 +1,9 @@
 
 .message-input
-  = form_for(@message, html: { class: 'ui form segment' }) do |f|
-    .field
+  = form_for(@message, html: { class: 'ui form' }, remote: true, authenticity_token: true) do |f|
+    .field.ui.fluid.action.input
       = f.text_area :content
-
-    .field
-      = f.submit "Send", class: 'ui button'
+      = f.submit "send", class: 'hidden'
+      #submit.ui.button
+        | Send
 
