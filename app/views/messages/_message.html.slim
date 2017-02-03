@@ -1,6 +1,6 @@
 .event.message
   .label
-    / img src="/images/avatar/small/joe.jpg"
+    = avatar_image(message.user)
   .content
     .summary
       a = message.user.name

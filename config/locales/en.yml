@@ -1,5 +1,7 @@
 ---
 en:
+  global:
+    or: Or
   meta:
     default:
       site: Coruscant

@@ -21,6 +21,7 @@ feature 'Facebook sign up' do
         }.by 1
 
         expect(current_path).to eq root_path
+        expect(user.image_url).to eq 'mock_user_thumbnail_url'
       end
     end
 

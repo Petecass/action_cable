@@ -36,7 +36,7 @@ module ApplicationHelper
   def omniauth_button(provider, resource_name)
     provider_name = provider.downcase.to_s.split('_')[0]
     options = {
-      class: "#{provider_name} ui button plus fluid",
+      class: "#{provider_name} ui button plus",
       id: "#{provider_name}Button",
     }
     # rubocop: disable Rails/OutputSafety
@@ -45,5 +45,14 @@ module ApplicationHelper
         #{provider_name.capitalize}".html_safe
     end
     # rubocop: enable Rails/OutputSafety
+  end
+
+  ##
+  # Creates an image tag for a users avatar.
+  # - user - User
+  def avatar_image(user)
+    url = user.image_url.present? ? user.image_url : image_url('default_profile.png')
+
+    image_tag(url)
   end
 end

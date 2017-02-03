@@ -11,6 +11,15 @@
   height: 10%;
 }
 
+.message__form__input {
+  flex: 1;
+  outline: none;
+  border: none;
+  border: solid 1px rgb(224, 225, 226);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
 .message {
   margin-bottom: 1rem;
 }

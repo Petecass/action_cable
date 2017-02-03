@@ -48,6 +48,7 @@ class User < ApplicationRecord
       user = User.find_or_initialize_by(email: email) do |u|
         u.name = auth.extra.raw_info.name
         u.password = Devise.friendly_token[0, 20]
+        u.image_url = auth.info.image
       end
 
       user.skip_confirmation! if user.respond_to?(:skip_confirmation)
